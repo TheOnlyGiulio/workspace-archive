@@ -1,0 +1,72 @@
+name: DockerPublish
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+env:
+  IMAGE_NAME: ${{ github.event.repository.name }}
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        docker:
+          - ./src/ExtraNet.Identity.API/Dockerfile:api
+          - ./src/ExtraNet.Identity.Job/Dockerfile:job
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v1.1.1
+        with:
+          versionSpec: '5.x'
+      - name: Determine Version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v1.1.1
+      - name: Build and Push Docker Images
+        run: |
+          IFS=':' read -r DOCKER_PATH TAG_SUFFIX <<< "${{ matrix.docker }}"
+          REPO_NAME_LOWER=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
+          if [ -z "$TAG_SUFFIX" ]; then
+            IMAGE_TAG="$REPO_NAME_LOWER"
+          else
+            IMAGE_TAG="${REPO_NAME_LOWER}-${TAG_SUFFIX}"
+          fi
+          IMAGE_ID="ghcr.io/$IMAGE_TAG:${{ steps.gitversion.outputs.semVer }}"
+          docker build . --file $DOCKER_PATH --tag $IMAGE_ID
+          echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker push $IMAGE_ID
+  helm:
+    needs: push
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v1.1.1
+        with:
+          versionSpec: '5.x'
+      - name: Determine Version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v1.1.1
+      - name: Install Helm
+        run: |
+          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+          chmod 700 get_helm.sh
+          ./get_helm.sh
+      - name: Package Helm Chart
+        run: |
+          REPO_OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          helm package ./eng/chart/extranet-identity --version ${{ steps.gitversion.outputs.semVer }} --app-version ${{ steps.gitversion.outputs.semVer }}
+          echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          helm push extranet-identity-${{ steps.gitversion.outputs.semVer }}.tgz oci://ghcr.io/$REPO_OWNER_LOWER/helm
+      - name: Tag branch
+        if: success() && github.ref == 'refs/heads/main'
+        run: |
+          git config --global user.email "BuildServiceAccount@<domain>"
+          git config --global user.name "Build Service Account"
+          git tag -a "${{ steps.gitversion.outputs.semVer }}" -m "${{ steps.gitversion.outputs.semVer }}" 2>&1
+          git push origin "${{ steps.gitversion.outputs.semVer }}" 2>&1

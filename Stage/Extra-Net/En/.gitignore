@@ -1,0 +1,13 @@
+# Ignore all 7-Zip archives
+*.7z
+
+# Ignore split multi-part 7-Zip archives (e.g., .7z.001, .7z.002, etc.)
+*.7z.*
+
+# Optional: ignore other common compressed archives
+# Uncomment if you want to ignore these too:
+# *.zip
+# *.rar
+# *.tar
+# *.gz
+# *.bz2
