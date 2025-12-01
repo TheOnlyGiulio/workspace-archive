@@ -1,352 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>OP DELIVERED – CONGRATS!</title>
-<link rel="stylesheet" href="../css/nav.css" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<script defer src="../javascript/nav.js"></script>
-<style>
-  :root {
-    --bg:#0f1419; --card:#1a1f24; --txt:#e6edf3; --muted:#9da7b3;
-    --up:#ff4500; --down:#7193ff; --gold:#ffd700; --award:#ff66c4; --green:#17c964;
-  }
-  * { box-sizing: border-box }
-  html, body { height: 100% }
-  body {
-    margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Color Emoji", Arial;
-    background: radial-gradient(1200px 800px at 80% -10%, rgba(255,69,0,0.25), transparent 60%),
-                radial-gradient(900px 600px at 10% 110%, rgba(113,147,255,0.25), transparent 60%),
-                var(--bg);
-    color: var(--txt); overflow:hidden;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <title>OP DELIVERED – CONGRATS!</title>
 
-  /* Top bar (fake reddit header) */
-  .bar {
-    position: fixed; inset: 0 0 auto 0; height: 56px; background: #0b1116d9; backdrop-filter: blur(6px);
-    display:flex; align-items:center; gap:16px; padding:0 16px; border-bottom:1px solid #20262c; z-index: 20;
-  }
-  .logo { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px }
-  .snoo {
-    width:28px; height:28px; border-radius:50%; background:var(--up); position:relative; box-shadow:0 0 18px #ff450099 inset;
-  }
-  .snoo::before, .snoo::after {
-    content:""; position:absolute; background:#fff; border-radius:50%;
-  }
-  .snoo::before { width:7px; height:7px; left:7px; top:9px; box-shadow:8px 0 0 #fff }
-  .snoo::after { width:3px; height:3px; right:-4px; top:-4px; box-shadow:0 12px 0 #fff; }
-  .pill { background:#111820; border:1px solid #232b33; padding:8px 12px; border-radius:999px; color:var(--muted); font-size:14px }
-  .karma { margin-left:auto; display:flex; align-items:center; gap:10px; font-weight:700 }
-  .karma .score { color:var(--gold); text-shadow:0 0 8px #ffd70055 }
-  .btn {
-    background:#10161d; border:1px solid #2a333d; color:var(--txt); padding:6px 10px; border-radius:10px; cursor:pointer; font-weight:600;
-  }
-  .btn:hover { border-color:#3a4551 }
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  /* Main Congrats Card */
-  .wrap {
-    position: absolute; inset: 56px 0 0 0; display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; padding:18px;
-  }
-  .card {
-    background: var(--card); border:1px solid #26303a; border-radius:18px; padding:18px; position:relative; overflow:hidden;
-    box-shadow: 0 10px 30px #0007;
-  }
-  .hero {
-    display:flex; align-items:center; justify-content:center; text-align:center; min-height:260px; border-radius:14px; position:relative;
-    background:
-      radial-gradient(1000px 400px at 50% -40%, rgba(255,69,0,.25), transparent 60%),
-      radial-gradient(800px 500px at 10% 120%, rgba(23,201,100,.22), transparent 60%),
-      #12181f;
-    border:1px solid #2b3540;
-  }
-  .hero h1 {
-    margin:0; font-size: clamp(28px, 5vw, 60px); line-height:1.05; letter-spacing:.5px;
-    background: conic-gradient(from 0deg, #ff4500, #ffd700, #17c964, #7193ff, #ff66c4, #ff4500);
-    -webkit-background-clip: text; background-clip:text; color: transparent; text-shadow: 0 0 24px #ffffff10;
-    animation: hue 6s linear infinite;
-  }
-  @keyframes hue { to { filter: hue-rotate(360deg) } }
-  .hero p { color:var(--muted); margin-top:8px }
-  .sub { display:flex; gap:8px; justify-content:center; margin-top:12px }
-  .tag {
-    font-size:12px; color:#111; background:linear-gradient(135deg, #ffd700, #ff9c00); padding:6px 10px; border-radius:999px; font-weight:800;
-    box-shadow:0 4px 16px #ffb30055;
-  }
-  .tag.silver { background:linear-gradient(135deg,#c0c0c0,#e9e9e9) }
-  .tag.plat { background:linear-gradient(135deg,#cfe8ff,#b3d4ff) }
+    <!-- Existing nav styles -->
+    <link rel="stylesheet" href="../css/nav.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="../css/endGame.css" />
 
-  /* r/place board */
-  .place {
-    display:grid; grid-template-columns: repeat(24, 1fr); gap:1px; background:#0d1117; border:1px solid #2a333d; padding:1px; border-radius:12px;
-  }
-  .px {
-    width: 100%; aspect-ratio: 1; background:#111820; cursor:crosshair; transition:transform .05s;
-  }
-  .px:hover { transform:scale(1.08) }
+    <!-- Existing nav logic -->
+    <script defer src="../javascript/nav.js"></script>
+    <!-- Page-specific logic -->
+    <script defer src="../javascript/endGame.js"></script>
+  </head>
+  <body>
+    <nav aria-label="Primary">
+      <button type="button" id="homeBtn">Home</button>
+      <button type="button" id="aboutBtn">About</button>
+      <button type="button" id="contactBtn">Contact</button>
+      <button type="button" id="gameBtn" aria-current="page">Game</button>
+    </nav>
 
-  /* Fake comment feed */
-  .feed { display:flex; flex-direction:column; gap:12px; max-height: 48vh; overflow:auto; padding-right:8px }
-  .comment {
-    display:grid; grid-template-columns: 42px 1fr; gap:10px; background:#12181f; border:1px solid #212a33; border-radius:12px; padding:12px;
-    animation: pop .2s ease;
-  }
-  @keyframes pop { from{ transform:scale(.98); opacity:.7 } }
-  .avatar { width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,#ff4500,#ff66c4); }
-  .meta { color:var(--muted); font-size:12px; display:flex; gap:8px; align-items:center }
-  .content { font-size:14px; line-height:1.35 }
-  .vote {
-    position:absolute; left:10px; top:10px; display:flex; flex-direction:column; align-items:center; gap:4px;
-  }
-  .arrow { width:0; height:0; border-left:8px solid transparent; border-right:8px solid transparent; cursor:pointer }
-  .arrow.up { border-bottom:12px solid var(--up) }
-  .arrow.down { border-top:12px solid var(--down) }
-  .scoreMini { font-size:12px; color: var(--muted) }
+    <header class="bar">
+      <div class="logo">
+        <div class="snoo"></div>
+        <div>r/YouWin</div>
+      </div>
+      <div class="pill">flair: <b>OP DELIVERED</b></div>
+      <button class="btn" id="btnAward">Give Award</button>
+      <button class="btn" id="btnUpvoteRain">Upvote Rain</button>
+      <button class="btn" id="btnRick">Totally not a rickroll</button>
+      <div class="karma">
+        Karma: <span class="score" id="karma">42</span>
+      </div>
+    </header>
 
-  /* Floating upvotes & awards */
-  .float { position:fixed; pointer-events:none; z-index: 9999; font-weight:800; filter: drop-shadow(0 2px 8px #0008) }
-  .upvote { color: var(--up); }
-  .award { font-size:18px }
-  .spark { color: var(--gold) }
-
-  /* Bottom help */
-  .help {
-    position:fixed; right:10px; bottom:10px; background:#0e151c; border:1px solid #22303b; color:var(--muted);
-    padding:10px 12px; border-radius:12px; font-size:12px; line-height:1.35
-  }
-  .help kbd {
-    background:#0b1116; border:1px solid #22303b; padding:2px 6px; border-radius:6px; color:#cbd5e1; font-weight:700;
-  }
-
-  /* Rickroll modal */
-  .modal { position:fixed; inset:0; display:none; place-items:center; background:#0008; z-index:10000 }
-  .modal .inner { width:min(900px, 92vw); aspect-ratio:16/9; background:#000; border:2px solid #333; border-radius:12px; overflow:hidden; }
-  .modal .close { position:absolute; top:14px; right:14px; background:#12181f; border:1px solid #2a333d; color:#ddd; padding:6px 10px; border-radius:10px; cursor:pointer }
-</style>
-</head>
-<body>
-  <nav aria-label="Primary">
-    <button type="button" id="homeBtn">Home</button>
-    <button type="button" id="aboutBtn">About</button>
-    <button type="button" id="contactBtn">Contact</button>
-    <button type="button" id="gameBtn" aria-current="page">Game</button>
-  </nav>
-<header class="bar">
-  <div class="logo"><div class="snoo"></div><div>r/YouWin</div></div>
-  <div class="pill">flair: <b>OP DELIVERED</b></div>
-  <button class="btn" id="btnAward">Give Award</button>
-  <button class="btn" id="btnUpvoteRain">Upvote Rain</button>
-  <button class="btn" id="btnRick">Totally not a rickroll</button>
-  <div class="karma">Karma: <span class="score" id="karma">42</span></div>
-</header>
-
-<main class="wrap">
-  <section class="card">
-    <div class="hero">
-      <div>
-        <h1>CONGRATULATIONS, OP 🎉</h1>
-        <p>Speedrun complete. Mods are asleep, post confetti.</p>
-        <div class="sub">
-          <span class="tag">GOLD x<strong id="goldCount">0</strong></span>
-          <span class="tag silver">SILVER x<strong id="silverCount">0</strong></span>
-          <span class="tag plat">PLATINUM x<strong id="platCount">0</strong></span>
+    <main class="wrap">
+      <section class="card">
+        <div class="hero">
+          <div>
+            <h1>CONGRATULATIONS, OP 🎉</h1>
+            <p>Speedrun complete. Mods are asleep, post confetti.</p>
+            <div class="sub">
+              <span class="tag">
+                GOLD x<strong id="goldCount">0</strong>
+              </span>
+              <span class="tag silver">
+                SILVER x<strong id="silverCount">0</strong>
+              </span>
+              <span class="tag plat">
+                PLATINUM x<strong id="platCount">0</strong>
+              </span>
+            </div>
+          </div>
+          <div class="vote" aria-hidden="true">
+            <div class="arrow up" id="upOne"></div>
+            <div class="scoreMini" id="miniScore">+69</div>
+            <div class="arrow down" id="downOne"></div>
+          </div>
         </div>
+
+        <h3 class="section-title">r/place mini-board</h3>
+        <div class="place" id="place"></div>
+
+        <div class="controls-row">
+          <button class="btn" id="btnChaos">Randomize Row</button>
+          <button class="btn" id="btnClean">Clear</button>
+          <span class="pill">
+            Tip: click to paint • hold <b>Shift</b> to spam
+          </span>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h3 class="section-title section-title--compact">
+          Comment section (sorting by 🔥)
+        </h3>
+
+        <div class="feed" id="feed"></div>
+
+        <div class="controls-row controls-row--no-wrap">
+          <input
+            id="input"
+            class="btn input-field"
+            placeholder="Drop your copium / based take…"
+          />
+          <button class="btn" id="btnPost">Post</button>
+        </div>
+      </aside>
+    </main>
+
+    <div class="help">
+      <b>Keyboard chaos</b><br />
+      <kbd>F</kbd> pay respects · <kbd>A</kbd> give random award ·
+      <kbd>U</kbd> upvote blast · <kbd>B</kbd> airhorn · <kbd>S</kbd> spawn
+      SUS · <kbd>R</kbd> rickroll<br />
+      Karma autoscales. Try the buttons. Try everything. No regrets.
+    </div>
+
+    <!-- Rickroll modal -->
+    <div class="modal" id="modal">
+      <button class="close" id="closeModal">close</button>
+      <div class="inner">
+        <iframe
+          id="yt"
+          width="100%"
+          height="100%"
+          src=""
+          title="rick"
+          allow="autoplay; encrypted-media"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
-      <div class="vote" aria-hidden="true">
-        <div class="arrow up" id="upOne"></div>
-        <div class="scoreMini" id="miniScore">+69</div>
-        <div class="arrow down" id="downOne"></div>
-      </div>
     </div>
-
-    <h3 style="margin:16px 4px 10px">r/place mini-board</h3>
-    <div class="place" id="place"></div>
-    <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap">
-      <button class="btn" id="btnChaos">Randomize Row</button>
-      <button class="btn" id="btnClean">Clear</button>
-      <span class="pill">Tip: click to paint • hold <b>Shift</b> to spam</span>
-    </div>
-  </section>
-
-  <aside class="card">
-    <h3 style="margin:0 0 10px 0;">Comment section (sorting by 🔥)</h3>
-    <div class="feed" id="feed"></div>
-    <div style="display:flex; gap:8px; margin-top:10px">
-      <input id="input" class="btn" style="flex:1; text-align:left" placeholder="Drop your copium / based take…" />
-      <button class="btn" id="btnPost">Post</button>
-    </div>
-  </aside>
-</main>
-
-<div class="help">
-  <b>Keyboard chaos</b><br>
-  <kbd>F</kbd> pay respects · <kbd>A</kbd> give random award · <kbd>U</kbd> upvote blast · <kbd>B</kbd> airhorn · <kbd>S</kbd> spawn SUS · <kbd>R</kbd> rickroll<br>
-  Karma autoscales. Try the buttons. Try everything. No regrets.
-</div>
-
-<!-- Rickroll modal -->
-<div class="modal" id="modal">
-  <button class="close" id="closeModal">close</button>
-  <div class="inner">
-    <iframe id="yt" width="100%" height="100%" src="" title="rick"
-      allow="autoplay; encrypted-media" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
-<script>
-/* ===== utilities ===== */
-const $ = (q,root=document)=>root.querySelector(q);
-const $$ = (q,root=document)=>[...root.querySelectorAll(q)];
-const rand = (a,b)=>Math.floor(Math.random()*(b-a+1))+a;
-const choice = (arr)=>arr[Math.floor(Math.random()*arr.length)];
-
-/* ===== karma ticker ===== */
-let karma = 42;
-const karmaEl = $('#karma');
-setInterval(()=>{ karma += Math.max(1, Math.floor(karma*0.003)) + rand(1,3); karmaEl.textContent = karma.toLocaleString(); }, 600);
-
-/* ===== floating bits (upvotes & awards) ===== */
-function floatThing(txt, cls, x = rand(5,95), y = rand(60,90)) {
-  const e = document.createElement('div');
-  e.className = 'float ' + cls;
-  e.textContent = txt;
-  e.style.left = x + 'vw';
-  e.style.top = y + 'vh';
-  document.body.appendChild(e);
-  const dx = (Math.random() < .5 ? -1 : 1) * (2 + Math.random()*2);
-  let t = 0;
-  const id = setInterval(()=>{
-    t += 16; const up = y - t/32; e.style.transform = `translate(${dx*t/64}px, ${-t/64}px) rotate(${t/30}deg)`; e.style.opacity = String(1 - t/1200);
-    if (up < -10) { clearInterval(id); e.remove(); }
-  },16);
-}
-
-function upvoteBurst(n=24) {
-  for (let i=0;i<n;i++) setTimeout(()=>floatThing('⬆', 'upvote', rand(8,92), rand(40,88)), i*20);
-}
-
-function giveRandomAward() {
-  const awards = [
-    ['🥇','goldCount'], ['🥈','silverCount'], ['💎','platCount'],
-    ['🏅','goldCount'], ['🌟','platCount'], ['🧡','goldCount']
-  ];
-  const [sym, id] = choice(awards);
-  floatThing(sym,'award', rand(15,85), rand(30,80));
-  const el = document.getElementById(id);
-  el.textContent = Number(el.textContent)+1;
-}
-
-/* ===== r/place mini board ===== */
-const colors = ['#ff4500','#ffd700','#17c964','#7193ff','#ff66c4','#ffffff','#000000','#9c27b0','#00ffd5','#00ff6a','#ff8a00'];
-const place = $('#place');
-const SIZE = 24;
-const cells = [];
-for (let i=0;i<SIZE*SIZE;i++){
-  const d = document.createElement('div'); d.className='px'; d.dataset.i = i;
-  place.appendChild(d); cells.push(d);
-}
-let painting = false;
-function paintCell(el){ el.style.background = choice(colors); }
-place.addEventListener('pointerdown', e=>{ if (e.target.classList.contains('px')) { painting = true; paintCell(e.target); }});
-place.addEventListener('pointerover', e=>{ if (painting || e.shiftKey) { if (e.target.classList.contains('px')) paintCell(e.target);} });
-window.addEventListener('pointerup', ()=>painting=false);
-$('#btnClean').onclick = ()=>cells.forEach(c=>c.style.background='#111820');
-$('#btnChaos').onclick = ()=>{ const r = rand(0, SIZE-1); for (let c=0;c<SIZE;c++){ paintCell(cells[r*SIZE+c]); } };
-
-/* ===== fake comment feed ===== */
-const feed = $('#feed');
-const names = ['u/QuantumBread','u/ItsJustMath','u/CertifiedBased','u/PixelKnight','u/OverlyHelpfulBot','u/SpaghettiPilot','u/SudoDoge','u/Ok-Algorithm-9000'];
-const lines = [
-  "OP speedran the tutorial and somehow any%’d the credits. Respect.",
-  "I came for answers, I left with confetti in my RAM.",
-  "This deserves 1000 updoots and a slice of virtual pizza.",
-  "Teacher brain says: rubric 10/10, meme brain says: send it.",
-  "Not all heroes wear capes; some press F on cooldown.",
-  "As a developer, I can confirm this code compiles into pure dopamine.",
-  "Stonks 📈",
-  "Doge saw this and said much congrats, very wow."
-];
-function makeComment(txt) {
-  const c = document.createElement('div'); c.className='comment';
-  c.innerHTML = `
-    <div class="avatar"></div>
-    <div>
-      <div class="meta"><b>${choice(names)}</b> · <span>${rand(1,59)} min ago</span> · <span>↑ ${rand(42,4200)}</span></div>
-      <div class="content">${txt}</div>
-    </div>`;
-  feed.prepend(c);
-}
-function randomComment(){ makeComment(choice(lines)); }
-for (let i=0;i<6;i++) randomComment();
-setInterval(()=>{ if (feed.childElementCount>50) feed.lastElementChild.remove(); randomComment(); }, 3000);
-$('#btnPost').onclick = ()=>{
-  const v = $('#input').value.trim(); if(!v) return; makeComment(v); $('#input').value='';
-  upvoteBurst(8); giveRandomAward();
-};
-
-/* ===== lil interactions ===== */
-$('#btnUpvoteRain').onclick = ()=> upvoteBurst(80);
-$('#btnAward').onclick = ()=> giveRandomAward();
-
-/* mini vote widget */
-let mini = 69;
-$('#upOne').onclick = ()=>{ mini+=1; $('#miniScore').textContent = '+'+mini; floatThing('⬆','upvote', 12, 30); }
-$('#downOne').onclick = ()=>{ mini=Math.max(0, mini-1); $('#miniScore').textContent = '+'+mini; floatThing('⬇','upvote', 12, 30); }
-
-/* ===== WebAudio airhorn (no external files) ===== */
-let ctx;
-function airhorn() {
-  ctx = ctx || new (window.AudioContext||window.webkitAudioContext)();
-  const o = ctx.createOscillator(), g = ctx.createGain();
-  o.type = 'square'; o.frequency.value = 440;
-  o.connect(g); g.connect(ctx.destination);
-  g.gain.setValueAtTime(0.001, ctx.currentTime);
-  g.gain.exponentialRampToValueAtTime(0.8, ctx.currentTime + 0.02);
-  o.start();
-  // quick pitch slide + decay
-  o.frequency.exponentialRampToValueAtTime(220, ctx.currentTime + 0.25);
-  g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
-  o.stop(ctx.currentTime + 0.36);
-}
-
-/* ===== SUS popups ===== */
-function spawnSus() {
-  const e = document.createElement('div');
-  e.className='float'; e.style.fontSize= rand(20,48)+'px'; e.style.left=rand(5,95)+'vw'; e.style.top=rand(55,90)+'vh';
-  e.textContent = choice(['ඞ','🟥','🟦','🟩']);
-  document.body.appendChild(e);
-  let t=0; const id=setInterval(()=>{ t+=16; e.style.transform=`translateY(${-t/28}px)`; e.style.opacity=String(1 - t/1200); if(t>1200){clearInterval(id); e.remove();}},16);
-}
-
-/* ===== Press F to pay respects ===== */
-function payRespects() {
-  floatThing('F', 'spark', rand(20,80), rand(60,88));
-  makeComment("Paid respects. OP ascends another +1 level.");
-}
-
-/* ===== Rickroll modal ===== */
-const modal = $('#modal'), yt = $('#yt');
-function openRick() {
-  modal.style.display = 'grid';
-  yt.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=0&controls=1";
-}
-function closeRick(){ modal.style.display='none'; yt.src=""; }
-$('#btnRick').onclick = openRick; $('#closeModal').onclick = closeRick;
-modal.addEventListener('click', e=>{ if(e.target===modal) closeRick(); });
-
-/* ===== keyboard chaos ===== */
-window.addEventListener('keydown', (e)=>{
-  const k = e.key.toLowerCase();
-  if (k==='f') payRespects();
-  if (k==='a') giveRandomAward();
-  if (k==='u') upvoteBurst(60);
-  if (k==='b') airhorn();
-  if (k==='s') spawnSus();
-  if (k==='r') openRick();
-});
-
-/* ===== autoplay little celebrations ===== */
-setTimeout(()=>{ upvoteBurst(30); giveRandomAward(); }, 1200);
-setTimeout(()=>{ upvoteBurst(40); }, 3000);
-</script>
-</body>
+  </body>
 </html>
