@@ -1,0 +1,15 @@
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\bin\Debug\net8.0\Service.deps.json
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\bin\Debug\net8.0\Service.dll
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\bin\Debug\net8.0\Service.pdb
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\bin\Debug\net8.0\Persistence.dll
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\bin\Debug\net8.0\Persistence.pdb
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\Service.csproj.Up2Date
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\Service.dll
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\refint\Service.dll
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\Service.pdb
+C:\Users\pabon\OneDrive\Desktop\Solution1\Service\obj\Debug\net8.0\ref\Service.dll

@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8DC6B505-34AD-45DC-BB64-0CB86FF57581}|Persistence\\Persistence.csproj|c:\\users\\pabon\\onedrive\\desktop\\solution1\\persistence\\phonesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DC6B505-34AD-45DC-BB64-0CB86FF57581}|Persistence\\Persistence.csproj|solutionrelative:persistence\\phonesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A0F97-AED8-400C-A12B-AB44516305AD}|RestfulPhoneApi\\RestfulPhoneApi.csproj|c:\\users\\pabon\\onedrive\\desktop\\solution1\\restfulphoneapi\\controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A0F97-AED8-400C-A12B-AB44516305AD}|RestfulPhoneApi\\RestfulPhoneApi.csproj|solutionrelative:restfulphoneapi\\controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A0F97-AED8-400C-A12B-AB44516305AD}|RestfulPhoneApi\\RestfulPhoneApi.csproj|c:\\users\\pabon\\onedrive\\desktop\\solution1\\restfulphoneapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A0F97-AED8-400C-A12B-AB44516305AD}|RestfulPhoneApi\\RestfulPhoneApi.csproj|solutionrelative:restfulphoneapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98EF6646-3DCB-449E-9B0A-9D44AA21CC39}|Service\\Service.csproj|c:\\users\\pabon\\onedrive\\desktop\\solution1\\service\\phonesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98EF6646-3DCB-449E-9B0A-9D44AA21CC39}|Service\\Service.csproj|solutionrelative:service\\phonesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\RestfulPhoneApi\\Program.cs",
+              "RelativeDocumentMoniker": "RestfulPhoneApi\\Program.cs",
+              "ToolTip": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\RestfulPhoneApi\\Program.cs",
+              "RelativeToolTip": "RestfulPhoneApi\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBIAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T10:51:28.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PhonesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\Persistence\\PhonesRepository.cs",
+              "RelativeDocumentMoniker": "Persistence\\PhonesRepository.cs",
+              "ToolTip": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\Persistence\\PhonesRepository.cs",
+              "RelativeToolTip": "Persistence\\PhonesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T10:45:12.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PhonesController.cs",
+              "DocumentMoniker": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\RestfulPhoneApi\\Controllers\\PhonesController.cs",
+              "RelativeDocumentMoniker": "RestfulPhoneApi\\Controllers\\PhonesController.cs",
+              "ToolTip": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\RestfulPhoneApi\\Controllers\\PhonesController.cs",
+              "RelativeToolTip": "RestfulPhoneApi\\Controllers\\PhonesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T10:47:46.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PhonesServices.cs",
+              "DocumentMoniker": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\Service\\PhonesServices.cs",
+              "RelativeDocumentMoniker": "Service\\PhonesServices.cs",
+              "ToolTip": "C:\\Users\\pabon\\OneDrive\\Desktop\\Solution1\\Service\\PhonesServices.cs",
+              "RelativeToolTip": "Service\\PhonesServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T10:47:46.967Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
