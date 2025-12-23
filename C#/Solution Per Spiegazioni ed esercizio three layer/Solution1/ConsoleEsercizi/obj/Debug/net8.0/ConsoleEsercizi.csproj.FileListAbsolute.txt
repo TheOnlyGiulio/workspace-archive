@@ -16,3 +16,22 @@ C:\Users\pabon\OneDrive\Desktop\Solution1\ConsoleEsercizi\bin\Debug\net8.0\Eserc
 C:\Users\pabon\OneDrive\Desktop\Solution1\ConsoleEsercizi\bin\Debug\net8.0\Esercizi.pdb
 C:\Users\pabon\OneDrive\Desktop\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.csproj.AssemblyReference.cache
 C:\Users\pabon\OneDrive\Desktop\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleE.F76E20DB.Up2Date
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\bin\Debug\net8.0\ConsoleEsercizi.exe
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\bin\Debug\net8.0\ConsoleEsercizi.deps.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\bin\Debug\net8.0\ConsoleEsercizi.runtimeconfig.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\bin\Debug\net8.0\ConsoleEsercizi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\bin\Debug\net8.0\ConsoleEsercizi.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\bin\Debug\net8.0\Esercizi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\bin\Debug\net8.0\Esercizi.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.csproj.AssemblyReference.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.AssemblyInfoInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.AssemblyInfo.cs
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.csproj.CoreCompileInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.sourcelink.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleE.F76E20DB.Up2Date
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\refint\ConsoleEsercizi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ConsoleEsercizi.genruntimeconfig.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ConsoleEsercizi\obj\Debug\net8.0\ref\ConsoleEsercizi.dll

@@ -6,7 +6,7 @@ namespace ConsoleEsercizi
     {
         static void Main(string[] args)
         {
-            var program = new Program();
+            var methods = new Program();
 
             Console.WriteLine("Insert width and height for your rectangle");
 
@@ -24,7 +24,7 @@ namespace ConsoleEsercizi
                 Console.Write("Invalid number, try again: ");
             }
 
-            Rettangolo rettangolo = program.CreazioneRettangolo(width, height);
+            Rettangolo rettangolo = methods.CreazioneRettangolo(width, height);
             Console.WriteLine(rettangolo.Width);
             Console.WriteLine(rettangolo.Height);
         }

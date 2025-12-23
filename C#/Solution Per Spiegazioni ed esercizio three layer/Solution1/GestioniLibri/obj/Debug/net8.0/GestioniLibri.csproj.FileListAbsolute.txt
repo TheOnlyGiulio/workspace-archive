@@ -1,0 +1,12 @@
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\bin\Debug\net8.0\GestioniLibri.deps.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\bin\Debug\net8.0\GestioniLibri.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\bin\Debug\net8.0\GestioniLibri.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\GestioniLibri.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\GestioniLibri.AssemblyInfoInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\GestioniLibri.AssemblyInfo.cs
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\GestioniLibri.csproj.CoreCompileInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\GestioniLibri.sourcelink.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\GestioniLibri.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\refint\GestioniLibri.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\GestioniLibri.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\GestioniLibri\obj\Debug\net8.0\ref\GestioniLibri.dll

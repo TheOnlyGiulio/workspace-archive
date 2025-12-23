@@ -9,3 +9,15 @@ C:\Users\pabon\OneDrive\Desktop\Solution1\Persistence\obj\Debug\net8.0\Persisten
 C:\Users\pabon\OneDrive\Desktop\Solution1\Persistence\obj\Debug\net8.0\refint\Persistence.dll
 C:\Users\pabon\OneDrive\Desktop\Solution1\Persistence\obj\Debug\net8.0\Persistence.pdb
 C:\Users\pabon\OneDrive\Desktop\Solution1\Persistence\obj\Debug\net8.0\ref\Persistence.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\bin\Debug\net8.0\Persistence.deps.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\bin\Debug\net8.0\Persistence.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\bin\Debug\net8.0\Persistence.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\Persistence.AssemblyInfoInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\Persistence.AssemblyInfo.cs
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\Persistence.sourcelink.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\Persistence.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\refint\Persistence.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\Persistence.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\Persistence\obj\Debug\net8.0\ref\Persistence.dll

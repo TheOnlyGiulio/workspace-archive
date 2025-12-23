@@ -37,3 +37,43 @@ C:\Users\pabon\OneDrive\Desktop\Solution1\RestfulPhoneApi\obj\Debug\net8.0\refin
 C:\Users\pabon\OneDrive\Desktop\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.pdb
 C:\Users\pabon\OneDrive\Desktop\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.genruntimeconfig.cache
 C:\Users\pabon\OneDrive\Desktop\Solution1\RestfulPhoneApi\obj\Debug\net8.0\ref\RestfulPhoneApi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\appsettings.Development.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\appsettings.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\RestfulPhoneApi.staticwebassets.endpoints.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\RestfulPhoneApi.exe
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\RestfulPhoneApi.deps.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\RestfulPhoneApi.runtimeconfig.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\RestfulPhoneApi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\RestfulPhoneApi.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\Persistence.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\Service.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\Service.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\bin\Debug\net8.0\Persistence.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.csproj.AssemblyReference.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.AssemblyInfoInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.AssemblyInfo.cs
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.csproj.CoreCompileInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.sourcelink.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\scopedcss\bundle\RestfulPhoneApi.styles.css
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\staticwebassets.build.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\staticwebassets.development.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulP.60380A69.Up2Date
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\refint\RestfulPhoneApi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\RestfulPhoneApi.genruntimeconfig.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\RestfulPhoneApi\obj\Debug\net8.0\ref\RestfulPhoneApi.dll

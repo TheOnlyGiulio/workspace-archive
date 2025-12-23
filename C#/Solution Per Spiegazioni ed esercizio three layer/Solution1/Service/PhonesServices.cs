@@ -1,5 +1,4 @@
 ﻿using Persistence;
-using System.Numerics;
 
 namespace Service
 {
@@ -12,7 +11,7 @@ namespace Service
             phonesRepository.CreatePhone(phone);
         }
 
-        public void DeletePhone(int id)
+        public void DeletePhone(Guid id)
         {
             phonesRepository.DeletePhone(id);
         }
@@ -22,7 +21,7 @@ namespace Service
             return phonesRepository.GetAllPhones();
         }
 
-        public Phone? GetPhone(int id)
+        public Phone? GetPhone(Guid id)
         {
             return phonesRepository.GetPhone(id);
         }

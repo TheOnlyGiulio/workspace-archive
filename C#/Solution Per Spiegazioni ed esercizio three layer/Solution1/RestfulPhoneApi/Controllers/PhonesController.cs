@@ -15,7 +15,7 @@ namespace RestfulPhoneApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             phonesServices.DeletePhone(id);
         }
@@ -39,7 +39,7 @@ namespace RestfulPhoneApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public Phone? Get(int id)
+        public Phone? Get(Guid id)
         {
             return phonesServices.GetPhone(id);
         }

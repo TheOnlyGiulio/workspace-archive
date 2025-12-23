@@ -9,3 +9,15 @@ C:\Users\pabon\OneDrive\Desktop\Solution1\ClassLibrary1\obj\Debug\net8.0\Eserciz
 C:\Users\pabon\OneDrive\Desktop\Solution1\ClassLibrary1\obj\Debug\net8.0\refint\Esercizi.dll
 C:\Users\pabon\OneDrive\Desktop\Solution1\ClassLibrary1\obj\Debug\net8.0\Esercizi.pdb
 C:\Users\pabon\OneDrive\Desktop\Solution1\ClassLibrary1\obj\Debug\net8.0\ref\Esercizi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\bin\Debug\net8.0\Esercizi.deps.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\bin\Debug\net8.0\Esercizi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\bin\Debug\net8.0\Esercizi.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\Esercizi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\Esercizi.AssemblyInfoInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\Esercizi.AssemblyInfo.cs
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\Esercizi.csproj.CoreCompileInputs.cache
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\Esercizi.sourcelink.json
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\Esercizi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\refint\Esercizi.dll
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\Esercizi.pdb
+C:\Code\workspace-archive\C#\Solution Per Spiegazioni ed esercizio three layer\Solution1\ClassLibrary1\obj\Debug\net8.0\ref\Esercizi.dll

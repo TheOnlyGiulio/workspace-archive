@@ -19,7 +19,7 @@
             }
         }
 
-        public void DeletePhone(int id)
+        public void DeletePhone(Guid id)
         {
             var foundPhone = phones.FirstOrDefault(p => p.Id == id);
             if (foundPhone != null)
@@ -38,7 +38,7 @@
             }
         }
 
-        public Phone? GetPhone(int id)
+        public Phone? GetPhone(Guid id)
         {
             return phones.FirstOrDefault(p => p.Id == id);
         }

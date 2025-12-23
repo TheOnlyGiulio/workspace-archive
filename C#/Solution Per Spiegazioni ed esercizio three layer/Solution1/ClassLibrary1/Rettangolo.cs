@@ -1,18 +1,14 @@
 ﻿namespace Esercizi
 {
-    public class Rettangolo(int width, int height)
+    public class Rettangolo
     {
-        public int Width { get; set; } = width;
-        public int Height { get; set; } = height;
+        public int Width { get; set; }
+        public int Height { get; set; }
         public int Area => Width * Height;
-
-        public bool ControlloDati()
+        public Rettangolo(int width, int height)
         {
-            if (Width == 0 || Height == 0)
-            {
-                return false;
-            }
-            return true;
+            Width = width;
+            Height = height;
         }
     }
 }
