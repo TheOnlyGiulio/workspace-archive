@@ -39,7 +39,7 @@ namespace RestfulPhoneApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public Phone? Get(Guid id)
+        public Phone? GetPhone(Guid id)
         {
             return phonesServices.GetPhone(id);
         }

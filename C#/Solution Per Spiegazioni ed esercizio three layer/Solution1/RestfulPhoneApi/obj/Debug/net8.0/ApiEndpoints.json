@@ -109,7 +109,7 @@
   },
   {
     "ContainingType": "RestfulPhoneApi.Controllers.PhonesController",
-    "Method": "Get",
+    "Method": "GetPhone",
     "RelativePath": "api/Phones/{id}",
     "HttpMethod": "GET",
     "IsController": true,

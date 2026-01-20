@@ -15,15 +15,15 @@ namespace GestioniLibri
             return listOfLibri;
         }
 
-        public Libro GetLibro(int Id)
+        public Libro GetLibro(int id)
         {
-            var libroTrovato = listOfLibri.FirstOrDefault(l => l.Id == Id);
+            var libroTrovato = listOfLibri.FirstOrDefault(l => l.Id == id);
             return libroTrovato;
         }
 
-        public void RemoveLibro(int Id)
+        public void RemoveLibro(int id)
         {
-            var libroTrovato = listOfLibri.FirstOrDefault(l => l.Id == Id);
+            var libroTrovato = listOfLibri.FirstOrDefault(l => l.Id == id);
             listOfLibri.Remove(libroTrovato);
         }
         public string GetTitle()

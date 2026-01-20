@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Code\\workspace-archive\\C#\\Solution Per Spiegazioni ed esercizio three layer\\Solution1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A0F97-AED8-400C-A12B-AB44516305AD}|RestfulPhoneApi\\RestfulPhoneApi.csproj|c:\\code\\workspace-archive\\c#\\solution per spiegazioni ed esercizio three layer\\solution1\\restfulphoneapi\\controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A0F97-AED8-400C-A12B-AB44516305AD}|RestfulPhoneApi\\RestfulPhoneApi.csproj|solutionrelative:restfulphoneapi\\controllers\\phonescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PhonesController.cs",
+              "DocumentMoniker": "C:\\Code\\workspace-archive\\C#\\Solution Per Spiegazioni ed esercizio three layer\\Solution1\\RestfulPhoneApi\\Controllers\\PhonesController.cs",
+              "RelativeDocumentMoniker": "RestfulPhoneApi\\Controllers\\PhonesController.cs",
+              "ToolTip": "C:\\Code\\workspace-archive\\C#\\Solution Per Spiegazioni ed esercizio three layer\\Solution1\\RestfulPhoneApi\\Controllers\\PhonesController.cs",
+              "RelativeToolTip": "RestfulPhoneApi\\Controllers\\PhonesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T15:17:16.991Z",
+              "EditorCaption": ""
             }
           ]
         }
