@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\workspace-archive\\C#\\Solution Per Spiegazioni ed esercizio three layer\\Solution1\\GestioniLibri\\GestioniLibri.csproj": {}
+    "C:\\Code\\workspace-archive\\C#\\ThreeLayerExplanation\\Solution1\\GestioniLibri\\GestioniLibri.csproj": {}
   },
   "projects": {
-    "C:\\Code\\workspace-archive\\C#\\Solution Per Spiegazioni ed esercizio three layer\\Solution1\\GestioniLibri\\GestioniLibri.csproj": {
+    "C:\\Code\\workspace-archive\\C#\\ThreeLayerExplanation\\Solution1\\GestioniLibri\\GestioniLibri.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\workspace-archive\\C#\\Solution Per Spiegazioni ed esercizio three layer\\Solution1\\GestioniLibri\\GestioniLibri.csproj",
+        "projectUniqueName": "C:\\Code\\workspace-archive\\C#\\ThreeLayerExplanation\\Solution1\\GestioniLibri\\GestioniLibri.csproj",
         "projectName": "GestioniLibri",
-        "projectPath": "C:\\Code\\workspace-archive\\C#\\Solution Per Spiegazioni ed esercizio three layer\\Solution1\\GestioniLibri\\GestioniLibri.csproj",
+        "projectPath": "C:\\Code\\workspace-archive\\C#\\ThreeLayerExplanation\\Solution1\\GestioniLibri\\GestioniLibri.csproj",
         "packagesPath": "C:\\Users\\pabon\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\workspace-archive\\C#\\Solution Per Spiegazioni ed esercizio three layer\\Solution1\\GestioniLibri\\obj\\",
+        "outputPath": "C:\\Code\\workspace-archive\\C#\\ThreeLayerExplanation\\Solution1\\GestioniLibri\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
