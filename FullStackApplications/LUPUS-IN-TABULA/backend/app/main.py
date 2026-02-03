@@ -4,10 +4,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.repositories.lobby_repositories import LobbyRepository
 from app.services.game_service import GameService
 from app.routes.lobby_routes import build_lobby_router
+from app.routes.auth_routes import router as auth_router
+
 
 
 def create_app() -> FastAPI:
     app = FastAPI()
+    app.include_router(auth_router, prefix="/auth", tags=["auth"])
 
     app.add_middleware(
         CORSMiddleware,
