@@ -1,1 +1,114 @@
+############################################
+# GENERAL
+############################################
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+*.pid
+
+############################################
+# ENV / SECRETS
+############################################
+.env
+.env.*
+!.env.example
+
+############################################
+# PYTHON / BACKEND
+############################################
+# Virtual environments
 venv/
+backend/venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# Pip / build artifacts
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+############################################
+# ALEMBIC / MIGRATIONS
+############################################
+# Keep migrations, ignore runtime junk
+alembic/__pycache__/
+backend/alembic/__pycache__/
+
+# If someone accidentally generates local versions
+alembic.ini.local
+
+############################################
+# DATABASE / POSTGRES
+############################################
+# Local database dumps
+*.sql
+*.dump
+
+# Docker volumes (important)
+**/pgdata/
+**/postgres-data/
+
+############################################
+# NODE / FRONTEND
+############################################
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+dist/
+
+# Cache
+.npm/
+.pnpm-store/
+.yarn/
+.yarn-cache/
+
+############################################
+# NEXT.JS / REACT
+############################################
+# Env files
+frontend/.env
+frontend/.env.*
+!.env.example
+
+# Turbo / Vercel
+.turbo/
+.vercel/
+
+############################################
+# DOCKER
+############################################
+docker-compose.override.yml
+
+############################################
+# IDEs / EDITORS
+############################################
+.vscode/
+.idea/
+*.iml
+
+############################################
+# TEMP / MISC
+############################################
+.cache/
+tmp/

@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useLobbyStore } from "../../../state/useLobbyStore";
+import AuthBadge from "../../../components/AuthBadge";
 
 function PageShell({ children }) {
   return (
@@ -39,9 +40,13 @@ function TopBar({ lobbyName, lobbyId, onBack }) {
         ← Back
       </button>
 
-      <div style={{ textAlign: "right" }}>
+      <div style={{ textAlign: "center" }}>
         <div style={{ fontSize: 18, fontWeight: 900 }}>{lobbyName}</div>
         <div style={{ opacity: 0.75, fontSize: 12 }}>ID: {lobbyId}</div>
+      </div>
+
+      <div style={{ textAlign: "right" }}>
+        <AuthBadge small />
       </div>
     </div>
   );
@@ -105,53 +110,11 @@ function SecondaryButton({ onClick, children, type = "button" }) {
   );
 }
 
-function ToggleButton({ active, onClick, children }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      style={{
-        padding: "10px 12px",
-        borderRadius: 12,
-        border: "1px solid rgba(255,255,255,0.16)",
-        background: active ? "rgba(255,255,255,0.14)" : "rgba(255,255,255,0.06)",
-        color: "white",
-        cursor: "pointer",
-        fontSize: 13,
-        fontWeight: 800,
-      }}
-    >
-      {children}
-    </button>
-  );
-}
-
-function TextInput({ value, onChange, placeholder }) {
-  return (
-    <input
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      style={{
-        width: "100%",
-        padding: "12px 12px",
-        borderRadius: 12,
-        border: "1px solid rgba(255,255,255,0.14)",
-        background: "rgba(0,0,0,0.25)",
-        color: "white",
-        outline: "none",
-      }}
-    />
-  );
-}
-
 function PlayersPanel({ players, loading, onRefresh }) {
   return (
     <Panel title="Inside this lobby">
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10 }}>
-        <div style={{ opacity: 0.85, fontSize: 13 }}>
-          {loading ? "Syncing..." : `${players.length} players`}
-        </div>
+        <div style={{ opacity: 0.85, fontSize: 13 }}>{loading ? "Syncing..." : `${players.length} players`}</div>
 
         <SecondaryButton onClick={onRefresh} type="button">
           Refresh
@@ -184,97 +147,20 @@ function PlayersPanel({ players, loading, onRefresh }) {
   );
 }
 
-function JoinForm({ loading, valueId, valueName, onChangeId, onChangeName, onSubmit, onCancel }) {
-  const canSubmit = valueId.trim().length > 0 && valueName.trim().length > 0 && !loading;
-
-  return (
-    <form onSubmit={onSubmit} style={{ marginTop: 14, display: "grid", gap: 10, maxWidth: 520 }}>
-      <TextInput value={valueId} onChange={onChangeId} placeholder="Player ID" />
-      <TextInput value={valueName} onChange={onChangeName} placeholder="Username" />
-      <div style={{ display: "flex", gap: 10 }}>
-        <PrimaryButton type="submit" disabled={!canSubmit}>
-          Confirm Join
-        </PrimaryButton>
-        <SecondaryButton onClick={onCancel}>Cancel</SecondaryButton>
-      </div>
-    </form>
-  );
-}
-
-function LeaveForm({ loading, valueId, onChangeId, onSubmit, onCancel }) {
-  const canSubmit = valueId.trim().length > 0 && !loading;
-
-  return (
-    <form onSubmit={onSubmit} style={{ marginTop: 14, display: "grid", gap: 10, maxWidth: 520 }}>
-      <TextInput value={valueId} onChange={onChangeId} placeholder="Player ID" />
-      <div style={{ display: "flex", gap: 10 }}>
-        <PrimaryButton type="submit" disabled={!canSubmit}>
-          Confirm Leave
-        </PrimaryButton>
-        <SecondaryButton onClick={onCancel}>Cancel</SecondaryButton>
-      </div>
-    </form>
-  );
-}
-
-function ActionsPanel({
-  mode,
-  setMode,
-  loading,
-  joinId,
-  joinName,
-  setJoinId,
-  setJoinName,
-  leaveId,
-  setLeaveId,
-  onJoin,
-  onLeave,
-  error,
-}) {
+function ActionsPanel({ loading, onJoin, onLeave, error }) {
   return (
     <Panel title="Actions">
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-        <ToggleButton active={mode === "join"} onClick={() => setMode(mode === "join" ? null : "join")}>
-          Join
-        </ToggleButton>
-        <ToggleButton active={mode === "leave"} onClick={() => setMode(mode === "leave" ? null : "leave")}>
-          Leave
-        </ToggleButton>
+        <PrimaryButton disabled={loading} onClick={onJoin}>
+          Join (as me)
+        </PrimaryButton>
+
+        <SecondaryButton onClick={onLeave} type="button">
+          Leave (as me)
+        </SecondaryButton>
       </div>
 
-      {mode === null && (
-        <div style={{ marginTop: 12, opacity: 0.8, fontSize: 13 }}>
-          Choose an action. Join requires ID + username. Leave requires only ID.
-        </div>
-      )}
-
-      {mode === "join" && (
-        <JoinForm
-          loading={loading}
-          valueId={joinId}
-          valueName={joinName}
-          onChangeId={(e) => setJoinId(e.target.value)}
-          onChangeName={(e) => setJoinName(e.target.value)}
-          onSubmit={onJoin}
-          onCancel={() => setMode(null)}
-        />
-      )}
-
-      {mode === "leave" && (
-        <LeaveForm
-          loading={loading}
-          valueId={leaveId}
-          onChangeId={(e) => setLeaveId(e.target.value)}
-          onSubmit={onLeave}
-          onCancel={() => setMode(null)}
-        />
-      )}
-
-      {error && (
-        <div style={{ marginTop: 12, color: "rgba(255,180,180,0.95)", fontSize: 13 }}>
-          {error}
-        </div>
-      )}
+      {error && <div style={{ marginTop: 12, color: "rgba(255,180,180,0.95)", fontSize: 13 }}>{error}</div>}
     </Panel>
   );
 }
@@ -286,45 +172,24 @@ export default function LobbyPage() {
 
   const { state, actions } = useLobbyStore();
 
-  const [mode, setMode] = useState(null);
-
-  const [joinId, setJoinId] = useState("p1");
-  const [joinName, setJoinName] = useState("Alice");
-
-  const [leaveId, setLeaveId] = useState("p1");
-
   useEffect(() => {
     if (state.lobbies.length === 0) actions.load();
   }, [actions, state.lobbies.length]);
 
-  const lobby = useMemo(
-    () => state.lobbies.find((l) => l.id() === lobbyId) ?? null,
-    [state.lobbies, lobbyId]
-  );
+  const lobby = useMemo(() => state.lobbies.find((l) => l.id() === lobbyId) ?? null, [state.lobbies, lobbyId]);
 
   const players = lobby ? lobby.players() : [];
   const lobbyName = lobby ? lobby.name() : "Lobby";
 
-  const handleJoin = async (e) => {
-    e.preventDefault();
-
-    const playerId = joinId.trim();
-    const playerName = joinName.trim();
-    if (!playerId || !playerName || state.loading) return;
-
-    await actions.joinLobby({ lobbyId, playerId, playerName });
-    setMode(null);
+  const handleJoin = async () => {
+    if (state.loading) return;
+    await actions.joinLobby({ lobbyId });
   };
 
-  const handleLeave = async (e) => {
-    e.preventDefault();
+  const handleLeave = async () => {
+    if (state.loading) return;
 
-    const playerId = leaveId.trim();
-    if (!playerId || state.loading) return;
-
-    const result = await actions.leaveLobby({ lobbyId, playerId });
-    setMode(null);
-
+    const result = await actions.leaveLobby({ lobbyId });
     if (result === null) router.push("/");
   };
 
@@ -334,20 +199,7 @@ export default function LobbyPage() {
 
       <PlayersPanel players={players} loading={state.loading} onRefresh={() => actions.load()} />
 
-      <ActionsPanel
-        mode={mode}
-        setMode={setMode}
-        loading={state.loading}
-        joinId={joinId}
-        joinName={joinName}
-        setJoinId={setJoinId}
-        setJoinName={setJoinName}
-        leaveId={leaveId}
-        setLeaveId={setLeaveId}
-        onJoin={handleJoin}
-        onLeave={handleLeave}
-        error={state.error}
-      />
+      <ActionsPanel loading={state.loading} onJoin={handleJoin} onLeave={handleLeave} error={state.error} />
     </PageShell>
   );
 }

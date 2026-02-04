@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
 import LobbyList from "../components/LobbyList";
+import AuthBadge from "../components/AuthBadge";
 import { useLobbyStore } from "../state/useLobbyStore";
 
 export default function HomePage() {
@@ -41,30 +42,32 @@ export default function HomePage() {
       }}
     >
       <div style={{ maxWidth: 980, margin: "0 auto" }}>
-        <header style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "baseline" }}>
+        <header style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center" }}>
           <div>
             <h1 style={{ margin: 0, fontSize: 28, letterSpacing: 0.2 }}>Lupus in Tabula</h1>
-            <div style={{ marginTop: 6, opacity: 0.8, fontSize: 13 }}>
-              Dev lobbies (FastAPI + Next.js)
-            </div>
+            <div style={{ marginTop: 6, opacity: 0.8, fontSize: 13 }}>Dev lobbies (FastAPI + Next.js)</div>
           </div>
 
-          <a
-            href="http://127.0.0.1:8000/docs"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              textDecoration: "none",
-              color: "white",
-              border: "1px solid rgba(255,255,255,0.16)",
-              background: "rgba(255,255,255,0.06)",
-              padding: "10px 12px",
-              borderRadius: 12,
-              fontSize: 13,
-            }}
-          >
-            Open API Docs
-          </a>
+          <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+            <AuthBadge />
+
+            <a
+              href="http://127.0.0.1:8000/docs"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                textDecoration: "none",
+                color: "white",
+                border: "1px solid rgba(255,255,255,0.16)",
+                background: "rgba(255,255,255,0.06)",
+                padding: "10px 12px",
+                borderRadius: 12,
+                fontSize: 13,
+              }}
+            >
+              Open API Docs
+            </a>
+          </div>
         </header>
 
         <section
@@ -76,6 +79,10 @@ export default function HomePage() {
             padding: 16,
           }}
         >
+          <div style={{ opacity: 0.85, fontSize: 13, marginBottom: 10 }}>
+            Tip: use <b>Login</b> to bind actions to your identity (JWT), then create or join a lobby.
+          </div>
+
           <form onSubmit={onCreate} style={{ display: "grid", gridTemplateColumns: "1fr 1fr auto", gap: 10 }}>
             <input
               value={lobbyId}
@@ -121,9 +128,7 @@ export default function HomePage() {
           </form>
 
           {state.error && (
-            <div style={{ marginTop: 10, color: "rgba(255,180,180,0.95)", fontSize: 13 }}>
-              {state.error}
-            </div>
+            <div style={{ marginTop: 10, color: "rgba(255,180,180,0.95)", fontSize: 13 }}>{state.error}</div>
           )}
         </section>
 

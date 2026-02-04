@@ -1,13 +1,21 @@
 import { LobbyApi } from "../services/lobbyApi";
+import { authStore } from "./authStore";
 
 class LobbyStore {
   constructor({ api } = {}) {
-    this._api = api ?? new LobbyApi();
+    this._api =
+      api ??
+      new LobbyApi({
+        baseUrl: "http://127.0.0.1:8000",
+        getToken: () => authStore.getToken(),
+      });
+
     this._state = {
       lobbies: [],
       loading: false,
       error: null,
     };
+
     this._listeners = new Set();
   }
 
@@ -48,10 +56,10 @@ class LobbyStore {
     }
   }
 
-  async joinLobby({ lobbyId, playerId, playerName }) {
+  async joinLobby({ lobbyId }) {
     this._setState({ loading: true, error: null });
     try {
-      const updated = await this._api.joinLobby({ lobbyId, playerId, playerName });
+      const updated = await this._api.joinLobby({ lobbyId });
       const lobbies = this._state.lobbies.map((l) => (l.id() === lobbyId ? updated : l));
       this._setState({ lobbies, loading: false });
       return updated;
@@ -61,10 +69,10 @@ class LobbyStore {
     }
   }
 
-  async leaveLobby({ lobbyId, playerId }) {
+  async leaveLobby({ lobbyId }) {
     this._setState({ loading: true, error: null });
     try {
-      const updated = await this._api.leaveLobby({ lobbyId, playerId });
+      const updated = await this._api.leaveLobby({ lobbyId });
 
       if (updated === null) {
         const lobbies = this._state.lobbies.filter((l) => l.id() !== lobbyId);
@@ -80,7 +88,6 @@ class LobbyStore {
       return null;
     }
   }
-
 }
 
 export const lobbyStore = new LobbyStore();
