@@ -1,5 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.api.schemas import CreateLobbyIn, JoinLobbyIn, LeaveLobbyIn, LobbyOut, PlayerOut
+from app.security.auth_dependency import get_current_player
+from app.api.auth_schemas import PlayerIdentity
 
 
 def _lobby_to_out(lobby) -> LobbyOut:
@@ -23,17 +25,28 @@ def build_lobby_router(get_game_service):
         return _lobby_to_out(lobby)
 
     @router.post("/{lobby_id}/join", response_model=LobbyOut)
-    def join_lobby(lobby_id: str, payload: JoinLobbyIn, game=Depends(get_game_service)):
-        lobby = game.join_lobby(lobby_id, payload.player_id, payload.player_name)
+    def join_lobby(
+        lobby_id: str,
+        payload: JoinLobbyIn,
+        me: PlayerIdentity = Depends(get_current_player),
+        game=Depends(get_game_service),
+    ):
+        lobby = game.join_lobby(lobby_id, me.player_id, me.player_name)
         if lobby is None:
             raise HTTPException(status_code=404, detail="Lobby not found")
         return _lobby_to_out(lobby)
 
     @router.post("/{lobby_id}/leave", response_model=LobbyOut)
-    def leave_lobby(lobby_id: str, payload: LeaveLobbyIn, game=Depends(get_game_service)):
-        lobby = game.leave_lobby(lobby_id, payload.player_id)
+    def leave_lobby(
+        lobby_id: str,
+        payload: LeaveLobbyIn,
+        me: PlayerIdentity = Depends(get_current_player),
+        game=Depends(get_game_service),
+    ):
+        lobby = game.leave_lobby(lobby_id, me.player_id)
         if lobby is None:
             raise HTTPException(status_code=404, detail="Lobby not found")
         return _lobby_to_out(lobby)
+
 
     return router

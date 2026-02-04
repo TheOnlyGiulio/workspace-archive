@@ -7,12 +7,11 @@ class CreateLobbyIn(BaseModel):
 
 
 class JoinLobbyIn(BaseModel):
-    player_id: str
-    player_name: str
+    pass
 
 
 class LeaveLobbyIn(BaseModel):
-    player_id: str
+    pass
 
 
 class PlayerOut(BaseModel):
