@@ -1,4 +1,5 @@
 import { Lobby } from "../domain/Lobby";
+import { ApiError } from "./apiError";
 
 const DEFAULT_BASE_URL = "http://127.0.0.1:8000";
 
@@ -37,32 +38,65 @@ export class LobbyApi {
       });
       return new Lobby(data);
     } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      if (msg.includes("HTTP 404")) return null;
+      if (e instanceof ApiError && e.status === 404) return null;
       throw e;
     }
   }
 
-  async _requestJson(path, { method = "GET", body = null } = {}) {
-    const headers = {};
+  async startGame({ lobbyId }) {
+    const data = await this._requestJson(`/lobbies/${encodeURIComponent(lobbyId)}/start`, {
+      method: "POST",
+      body: {},
+    });
+    return new Lobby(data);
+  }
 
-    const token = this._getToken();
-    if (token) headers.Authorization = `Bearer ${token}`;
+  async endGame({ lobbyId }) {
+    const data = await this._requestJson(`/lobbies/${encodeURIComponent(lobbyId)}/end`, {
+      method: "POST",
+      body: {},
+    });
+    return new Lobby(data);
+  }
 
-    if (body !== null) headers["Content-Type"] = "application/json";
+  async rematch({ lobbyId }) {
+    const data = await this._requestJson(`/lobbies/${encodeURIComponent(lobbyId)}/rematch`, {
+      method: "POST",
+      body: {},
+    });
+    return new Lobby(data);
+  }
+
+  async getLobby({ lobbyId }) {
+    const data = await this._requestJson(`/lobbies/${encodeURIComponent(lobbyId)}`, {
+      method: "GET",
+    });
+    return new Lobby(data);
+  }
+
+  async _requestJson(path, { method = "GET", body } = {}) {
+    const token = this._getToken ? this._getToken() : null;
 
     const res = await fetch(`${this._baseUrl}${path}`, {
       method,
-      headers,
-      body: body === null ? undefined : JSON.stringify(body),
+      headers: {
+        ...(body ? { "Content-Type": "application/json" } : {}),
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      body: body ? JSON.stringify(body) : undefined,
     });
 
     if (!res.ok) {
-      const text = await res.text().catch(() => "");
-      throw new Error(`HTTP ${res.status} ${res.statusText} ${text}`.trim());
+      let detail = "";
+      try {
+        const j = await res.json();
+        detail = typeof j?.detail === "string" ? j.detail : JSON.stringify(j);
+      } catch {
+        detail = await res.text().catch(() => "");
+      }
+      throw new ApiError(res.status, detail.trim());
     }
 
-    if (res.status === 204) return null;
     return res.json();
   }
 }
